@@ -1,0 +1,13 @@
+{% extends 'page_1.html' %}
+{% block title%}
+Capitflize
+{% endblock %}
+
+{% block content%}
+
+<div class="capit" style="width: 280px; height: 220px;border: 1px solid black;display: flex;gap:10px">
+{% for el in cap %}
+<img src="{{ el.img_capital.url}}" >
+{% endfor %}
+    </div>
+{% endblock %}

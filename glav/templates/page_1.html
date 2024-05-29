@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>00000000{% block title %} {% endblock %}</title>
+</head>
+<body>
+<div class="flag" style="width: 280px; height: 220px;border: 1px solid black;display: flex;gap:10px">
+{% for l in land %}
+    <a href="{% url 'c' l.id %}">
+<img src="{{l.flag.url}}" style="max-width: 100%; height: 100%;  justify-content: center;flex-direction:column; align-items: center;">
+
+
+</a>
+{% endfor %}
+    </div>
+
+  {% block content %}<a href="{% url 'plus' %}">Pluuuuuuussss</a> {% endblock %}
+</body>
+</html>
